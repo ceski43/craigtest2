@@ -19,6 +19,7 @@ public class VersionControl2 {
         // TODO code application logic here
         System.out.println("helloas");
         System.out.println("helloas2");
+        System.out.println("helloas2555");
     }
     
 }
