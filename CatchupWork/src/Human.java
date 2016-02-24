@@ -18,36 +18,18 @@ public class Human{
    }
    
    public void setAge( int age ){
-       HumanAge = age;
+       HumanAge = 52;
    }
-   /* This is an example of 'Acess Control Priate means it can onnly be acccesed in its own class inn this case 'Human' */
-   public int getAge( ){
+   /* This is an example of 'Acess Control Private means it can onnly be acccesed in its own class inn this case 'Human' */
+   private int getAge( ){
        System.out.println("age is :" + HumanAge ); 
        return HumanAge;
    }
-   
-   public class HumanHeight extends Human{
-   
-   int HumanHeight;
- /* This is An 'Object example */
-   public HumanHeight(int Height){
-      // the parammeter of this contructor is 'name'
-      System.out.println("Name chosen is :" + Height); 
-   }
-   
-   public void setHeight( int Height ){
-       HumanHeight = Height;
-   }
-   
-   public int getHeight( ){
-       System.out.println("Height is :" + HumanHeight ); 
-       return HumanHeight;
-   }
- }
-   
     public static void main(String []args){
       /* Object creation */
       Human myHuman = new Human( "Craig" );
+      
+      Human humanheight = new Human( "6.2" );
       
       /* this methhod sets the human age. */
       myHuman.setAge( 52 );
@@ -56,13 +38,14 @@ public class Human{
       myHuman.getAge( );
       
       /* imm calling this methhod to get the hhuman Height */
-      myHuman.setHeight( 5 );
+      humanheight.setHeight( 5 );
       
       /* imm calling this methhod to get the hhuman Height */
-      myHuman.getHeight ( );
+      humanheight.getHeight ( );
 
       /* You can access instance variable as follows as well */
       System.out.println("Variable Value :" + myHuman.HumanAge ); 
+      System.out.println("Variable Value :" + humanheight.HumanHeight ); 
    }
 }
 
